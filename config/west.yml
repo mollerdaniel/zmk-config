@@ -4,10 +4,5 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: mollerdaniel
       url-base: https://github.com/mollerdaniel
-  projects:
-    - name: zmk-config
-      remote: mollerdaniel
-      revision: master
-      import: config/west.yml
   self:
     path: config
