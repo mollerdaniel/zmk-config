@@ -9,5 +9,6 @@ features:
   - keys
   - display
   - encoder
+  - underglow
 siblings:
   - avalanche_v4_left
