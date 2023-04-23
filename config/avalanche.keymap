@@ -3,10 +3,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
 
-ZMK_UNICODE_SINGLE(ake, N0, N0, E, N5)  // å
-ZMK_UNICODE_SINGLE(arlig, N0, N0, E, N4)  // ä
-ZMK_UNICODE_SINGLE(osten, N0, N0, F, N6)  // ö
-
 / {
     behaviors {
         bhm: balanced_homerow_mods {
@@ -74,8 +70,8 @@ ZMK_UNICODE_SINGLE(osten, N0, N0, F, N6)  // ö
         layer_Layer__2 {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans        &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &ake
-    &trans        &trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &osten  &arlig
+    &trans        &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+    &trans        &trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
     &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                   &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
             >;
