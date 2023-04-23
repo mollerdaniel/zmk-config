@@ -69,10 +69,10 @@
 
         layer_Layer__2 {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans        &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans        &trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans     &trans
+    &trans        &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &kp RA(W)
+    &trans        &trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &kp RA(P)  &kp RA(Q)  &trans
+    &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans
                   &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
             >;
         };
