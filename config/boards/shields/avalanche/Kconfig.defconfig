@@ -32,6 +32,14 @@ config SSD1306_REVERSE_MODE
 endif # ZMK_DISPLAY
 
 if LVGL
+choice LV_DISP_ROT
+    default LV_DISP_ROT_180
+
+config LVGL_HOR_RES_MAX
+	default 128
+
+config LVGL_VER_RES_MAX
+	default 64
 
 config LV_Z_VDB_SIZE
 	default 64
