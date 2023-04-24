@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -45,11 +46,11 @@
 
         default_layer {
             bindings = <
-         &kp ESC  &kp NUMBER_1        &kp N2  &kp N3     &kp N4   &kp N5                       &kp N6         &kp N7     &kp N8     &kp N9     &kp N0         &kp MINUS
-         &kp TAB         &kp Q         &kp W   &kp E      &kp R    &kp T                        &kp Y          &kp U      &kp I      &kp O      &kp P         &kp EQUAL
-&kp LEFT_CONTROL  &kp CAPSLOCK         &kp A   &kp S      &kp D    &kp F  &kp G                                &kp H      &kp J      &kp K      &kp L  &kp LEFT_BRACKET  &kp RIGHT_BRACKET          &mo 2
-  &kp LEFT_SHIFT         &kp Z         &kp X   &kp C      &kp V    &kp B  &none  &none          &none  &kp BACKSPACE      &kp N      &kp M  &kp SLASH          &kp SEMI   &kp SINGLE_QUOTE  &kp BACKSLASH
-                      &kp LGUI  &kp LEFT_ALT   &mo 1  &kp SPACE  &kp DEL                &kp RIGHT_GUI      &kp SPACE  &kp ENTER  &kp COMMA    &kp DOT
+         &kp ESC  &kp NUMBER_1        &kp N2  &kp N3     &kp N4   &kp N5                  &kp N6         &kp N7     &kp N8     &kp N9     &kp N0         &kp MINUS
+         &kp TAB         &kp Q         &kp W   &kp E      &kp R    &kp T                   &kp Y          &kp U      &kp I      &kp O      &kp P         &kp EQUAL
+&kp LEFT_CONTROL  &kp CAPSLOCK         &kp A   &kp S      &kp D    &kp F  &kp G                           &kp H      &kp J      &kp K      &kp L  &kp LEFT_BRACKET  &kp RIGHT_BRACKET          &none
+  &kp LEFT_SHIFT         &kp Z         &kp X   &kp C      &kp V    &kp B  &none  &none  &kp RGUI  &kp BACKSPACE      &kp N      &kp M  &kp SLASH          &kp SEMI   &kp SINGLE_QUOTE  &kp BACKSLASH
+                      &kp LGUI  &kp LEFT_ALT   &mo 1  &kp SPACE  &kp DEL                   &mo 2      &kp SPACE  &kp ENTER  &kp COMMA    &kp DOT
             >;
 
             sensor-bindings =
@@ -59,21 +60,21 @@
 
         layer_Layer__1 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4           &kp F5                  &kp F6        &kp F7    &kp F8       &kp F9        &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans           &trans                  &trans  &kp UP_ARROW    &trans  &kp PAGE_UP         &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &trans  &trans                      &kp LEFT  &kp DOWN    &kp RIGHT  &kp PAGE_DOWN  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans        &trans    &trans       &trans         &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &rgb_ug RGB_EFF                  &trans        &trans    &trans       &trans         &trans
+&kp K_POWER  &kp F1  &kp F2           &kp F3           &kp F4           &kp F5                               &kp F6        &kp F7    &kp F8        &kp F9          &kp F10      &trans
+     &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                               &trans  &kp UP_ARROW    &trans   &kp PAGE_UP           &trans   &kp RA(W)
+     &trans  &trans  &trans           &trans           &trans  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI                          &kp LEFT  &kp DOWN     &kp RIGHT    &kp PAGE_DOWN   &kp RA(P)  &kp RA(Q)  &trans
+     &trans  &trans  &trans           &trans           &trans           &trans           &trans  &kp C_MUTE  &trans        &trans    &trans        &trans       &kp C_PREV  &kp C_NEXT     &trans  &trans
+             &trans  &trans           &trans           &trans  &rgb_ug RGB_EFF                               &trans        &trans    &trans  &kp C_VOL_DN  &kp C_VOLUME_UP
             >;
         };
 
         layer_Layer__2 {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans     &trans
-    &trans        &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &kp RA(W)
-    &trans        &trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &kp RA(P)  &kp RA(Q)  &trans
-    &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans
-                  &trans        &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&out OUT_TOG        &trans        &trans        &trans        &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+      &trans        &trans        &trans        &trans        &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+      &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                    &trans        &trans        &trans        &trans  &trans                  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
