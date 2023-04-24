@@ -34,7 +34,7 @@ endif # ZMK_DISPLAY
 if LVGL
 
 config LV_DISP_ROT
-    default LV_DISP_ROT_180
+    default 2
 
 config LVGL_HOR_RES_MAX
 	default 128
