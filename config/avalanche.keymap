@@ -61,7 +61,7 @@
         layer_Layer__1 {
             bindings = <
 &kp K_POWER  &kp F1  &kp F2           &kp F3           &kp F4           &kp F5                                 &kp F6        &kp F7    &kp F8        &kp F9          &kp F10      &trans
-     &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                               &kp HOME  &kp UP_ARROW   &kp END   &kp PAGE_UP           &trans   &kp RA(W)
+     &trans  &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                               &kp HOME  &kp UP_ARROW   &kp END   &kp PAGE_UP        &kp GRAVE   &kp RA(W)
      &trans  &trans  &trans           &trans           &trans  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI                            &kp LEFT  &kp DOWN     &kp RIGHT    &kp PAGE_DOWN   &kp RA(P)  &kp RA(Q)  &trans
      &trans  &trans  &trans           &trans           &trans           &trans           &trans  &kp C_MUTE    &trans        &trans    &trans        &trans       &kp C_PREV  &kp C_NEXT     &trans  &trans
              &trans  &trans           &trans           &trans  &rgb_ug RGB_EFF                                 &trans        &trans    &trans  &kp C_VOL_DN  &kp C_VOLUME_UP
