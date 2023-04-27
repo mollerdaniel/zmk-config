@@ -1,7 +1,48 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/led/led.h>
+
+&pinctrl {
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+        };
+    };
+
+    spi3_sleep: spi3_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+            low-power-enable;
+        };
+    };
+};
+
+&spi3 {
+  status = "okay";
+  pinctrl-0 = <&spi3_default>;
+  pinctrl-1 = <&spi3_sleep>;
+  pinctrl-names = "default", "sleep";
+
+  led_strip: ws2812@0 {
+    compatible = "worldsemi,ws2812-spi";
+    label = "WS2812";
+
+    /* SPI */
+    reg = <0>;
+    spi-max-frequency = <5250000>;
+
+    /* WS2812 */
+    chain-length = <38>; /* number of LEDs */
+    spi-one-frame = <0x70>; /* make sure to configure this properly for your SOC */
+    spi-zero-frame = <0x40>; /* make sure to configure this properly for your SOC */
+    color-mapping = <LED_COLOR_ID_GREEN
+                          LED_COLOR_ID_RED
+                          LED_COLOR_ID_BLUE>;
+  };
+};
 
 / {
     chosen {
+        zmk,underglow = &led_strip;
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
@@ -77,7 +118,7 @@
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <31>;
+        multiplex-ratio = <63>;
         segment-remap;
         com-invdir;
         com-sequential;

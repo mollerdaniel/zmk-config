@@ -5,6 +5,9 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
+    
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 
 endif
 
@@ -14,8 +17,11 @@ config ZMK_SPLIT
     default y
 if ZMK_DISPLAY
 
+config SPI
+    default y
+
 config I2C
-	default y
+    default y
 
 config SSD1306
 	default y
@@ -27,23 +33,26 @@ endif # ZMK_DISPLAY
 
 if LVGL
 
-config LVGL_HOR_RES_MAX
-	default 128
+#config LV_DISP_ROT
+#    default 2
 
-config LVGL_VER_RES_MAX
+#config LVGL_HOR_RES_MAX
+#	default 128
+
+#config LVGL_VER_RES_MAX
+#	default 64
+
+config LV_Z_VDB_SIZE
 	default 64
 
-config LVGL_VDB_SIZE
-	default 64
-
-config LVGL_DPI
+config LV_Z_DPI
 	default 148
 
-config LVGL_BITS_PER_PIXEL
+config LV_Z_BITS_PER_PIXEL
 	default 1
 
-choice LVGL_COLOR_DEPTH
-	default LVGL_COLOR_DEPTH_1
+choice LV_COLOR_DEPTH
+	default LV_COLOR_DEPTH_1
 endchoice
 
 endif # LVGL
